@@ -18,7 +18,7 @@ const Work = () => (
         Portfolio Dr. Herman Carter <Badge>2022-</Badge>
       </Title>
       <P>
-        Ein Portfolio für einen guten Freund, der auf einem Rollenspielserver des Spiels ArmaA 3 Dr. Herman Carter verkörpert.
+        Ein Portfolio für einen guten Freund, der auf einem Rollenspielserver des Spiels ArmA 3 Dr. Herman Carter verkörpert.
       </P>
       <List ml={4} my={4}>
         <ListItem>
