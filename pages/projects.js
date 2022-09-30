@@ -12,16 +12,7 @@ import Section from "../components/section";
 import { NextLink } from "next/link";
 import { WorkGridItem } from "../components/grid-item";
 
-import thumbInkdrop from "../public/images/placeholder.png";
-import thumbWalknote from "../public/images/placeholder.png";
-import thumbFourPainters from "../public/images/placeholder.png";
-import thumbMenkiki from "../public/images/placeholder.png";
-import thumbMargelo from "../public/images/placeholder.png";
-import thumbModeTokyo from "../public/images/placeholder.png";
-import thumbStyly from "../public/images/placeholder.png";
-import thumbPichu2 from "../public/images/placeholder.png";
-import thumbFreeDBTagger from "../public/images/placeholder.png";
-import thumbAmembo from "../public/images/placeholder.png";
+import carterPortfolio from '../public/images/projects/carterPortfolio.png'
 
 const Works = () => (
   <Layout title="Projekte">
@@ -30,14 +21,15 @@ const Works = () => (
         Meine Projekte
       </Heading>
       <Section>
-        <Heading mt={6} as="h4" fontSize={15} align="center">
-          Noch in Arbeit / Work in Progress
-        </Heading>
+
         {/* <NextLink href="/" passHref scroll={false}>
           <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
             Zurück
           </Button>
         </NextLink> */}
+        <WorkGridItem id="carterportfolio" title="Portfolio Dr. Herman Carter" thumbnail={carterPortfolio}>
+          Portfolio für Dr. Herman Carter, einen fiktionalen Arzt. Steckbrief sowie eine Übersicht über seine Produkte.
+        </WorkGridItem>
       </Section>
       {/* <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
