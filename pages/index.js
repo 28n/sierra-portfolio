@@ -4,46 +4,27 @@ import {
   Container,
   Heading,
   Box,
-  SimpleGrid,
   Button,
   List,
   ListItem,
-  useColorModeValue,
-  chakra,
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import Paragraph from "../components/paragraph";
 import { BioSection, BioYear } from "../components/bio";
 import Layout from "../components/layouts/article";
 import Section from "../components/section";
-import { GridItem } from "../components/grid-item";
 import {
   IoLogoTwitter,
   IoLogoInstagram,
   IoLogoGithub,
   IoLogoYoutube,
+  IoMailOpen,
 } from "react-icons/io5";
-import thumbYouTube from "../public/images/placeholder.png";
-import thumbInkdrop from "../public/images/placeholder.png";
-import Image from "next/image";
 
-const ProfileImage = chakra(Image, {
-  shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop),
-});
 
 const Home = () => (
   <Layout>
     <Container>
-      {/* <Box
-        borderRadius="lg"
-        mb={6}
-        p={3}
-        textAlign="center"
-        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-        css={{ backdropFilter: 'blur(10px)' }}
-      >
-        Hello, I&apos;m an indie app developer based in Japan!
-      </Box> */}
 
       <Box display={{ md: "flex" }}>
         <Box flexGrow={1}>
@@ -130,9 +111,18 @@ const Home = () => (
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
-          Ich, aber woanders
+          Kontaktmöglichkeiten
         </Heading>
         <List>
+          <List>
+            <Link href="mailto:sierra@samsierra.de">
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<IoMailOpen />}
+              >sierra@samsierra.de</Button>
+            </Link>
+          </List>
           <ListItem>
             <Link href="https://www.instagram.com/284nh/" target="_blank">
               <Button
