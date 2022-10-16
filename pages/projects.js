@@ -13,6 +13,7 @@ import { NextLink } from "next/link";
 import { WorkGridItem } from "../components/grid-item";
 
 import carterPortfolio from '../public/images/projects/carterPortfolio.png'
+import gtg from '../public/images/projects/gtg.png'
 
 const Works = () => (
   <Layout title="Projekte">
@@ -29,6 +30,11 @@ const Works = () => (
         </NextLink> */}
         <WorkGridItem id="carterportfolio" title="Portfolio Dr. Herman Carter" thumbnail={carterPortfolio}>
           Portfolio für Dr. Herman Carter, einen fiktionalen Arzt. Steckbrief sowie eine Übersicht über seine Produkte.
+        </WorkGridItem>
+      </Section>
+      <Section delay={0.3}>
+        <WorkGridItem id="guesstheghost" title="Guess the Ghost" thumbnail={gtg}>
+          Einfaches Spiel, in dem man den Typs eines Geistes anhand der Beweise erraten muss. Programmiert für das Spiel Phasmophobia.
         </WorkGridItem>
       </Section>
       {/* <SimpleGrid columns={[1, 1, 2]} gap={6}>
