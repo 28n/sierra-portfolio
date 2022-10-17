@@ -38,10 +38,10 @@ const Comments = () => {
 
   const [name, setName] = useState('')
   const [comment, setComment] = useState('')
-  const nameError = name === ''
-  const commentError = comment === ''
+  const [submitting, setSubmitting] = useState(false)
   async function handleSubmit(e) {
     e.preventDefault()
+    setSubmitting(true)
 
     const data = {
       name,
@@ -61,6 +61,8 @@ const Comments = () => {
       axios.get('/api/comments').then((res) => {
         setComments(res.data)
       })
+    }).finally(() => {
+      setSubmitting(false)
     })
 
   }
@@ -87,7 +89,7 @@ const Comments = () => {
                 <FormLabel>Nachricht</FormLabel>
                 <Textarea value={comment} onChange={(event) => { setComment(event.target.value) }} />
               </FormControl>
-              <Button width={"full"} mt={4} colorScheme="teal" type="submit">Erstellen</Button>
+              <Button disabled={submitting} width={"full"} mt={4} colorScheme="teal" type="submit">Erstellen</Button>
             </form>
           </Box>
         </Section>
