@@ -20,7 +20,7 @@ import {
   IoLogoYoutube,
   IoMailOpen,
 } from "react-icons/io5";
-
+import email from './redirects/mail'
 
 const Home = () => (
   <Layout>
@@ -115,7 +115,7 @@ const Home = () => (
         </Heading>
         <List>
           <List>
-            <Link href="mailto:sierra@samsierra.de">
+            <Link href="/redirects/mail">
               <Button
                 variant="ghost"
                 colorScheme="teal"
@@ -124,20 +124,20 @@ const Home = () => (
             </Link>
           </List>
           <ListItem>
-            <Link href="https://www.instagram.com/284nh/" target="_blank">
+            <Link href="/redirects/instagram" target="_self">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoInstagram />}
               >
-                @284nh
+                @n1ckcz
               </Button>
             </Link>
           </ListItem>
           <ListItem>
             <Link
-              href="https://www.youtube.com/channel/UC6OxmNUJ2GeJAz5BaFIANHA"
-              target="_blank"
+              href="/redirects/youtube"
+              target="_self"
             >
               <Button
                 variant="ghost"
@@ -149,7 +149,7 @@ const Home = () => (
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/28nh04" target="_blank">
+            <Link href="/redirects/twitter" target="_self">
               <Button
                 variant="ghost"
                 colorScheme="teal"
@@ -160,7 +160,7 @@ const Home = () => (
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://github.com/28n" target="_blank">
+            <Link href="/redirects/github" target="_self">
               <Button
                 variant="ghost"
                 colorScheme="teal"
