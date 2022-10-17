@@ -74,6 +74,9 @@ const Navbar = (props) => {
           <LinkItem href="/projects" path={path}>
             Meine Projekte
           </LinkItem>
+          <LinkItem href="/comments" path={path}>
+            Kommentare
+          </LinkItem>
           {/* <LinkItem href="/posts" path={path}>
             Posts
           </LinkItem> */}
