@@ -10,7 +10,7 @@ const flamulator_words = raw_flamulator.map((w) => { return w.toLowerCase() })
 
 const Comment = ({ c, index, isLast }) => {
   return (
-    <Box key={index} as="div" p={3} borderBottomWidth={isLast ? 0 : 1}>
+    <Box key={index} as="div" p={3} borderBottomWidth={isLast ? 0 : 1} borderBottomColor={"#525252"}>
 
       <Container display={"flex"} alignItems={"center"} mb={4}>
         <Tag>
@@ -52,6 +52,14 @@ const Comments = () => {
       setName('')
       setComment('')
       alert('FLAMING DETECTED')
+      setSubmitting(false)
+      return
+    }
+
+    if (name.trim().length === 0 || comment.trim().length === 0) {
+      setName('')
+      setComment('')
+      setSubmitting(false)
       return
     }
 
@@ -82,12 +90,12 @@ const Comments = () => {
             }}>
               <FormControl isRequired>
                 <FormLabel>Name</FormLabel>
-                <Input value={name} type="text" onChange={(event) => { setName(event.target.value) }} />
+                <Input value={name} type="text" borderColor={"#525252"} onChange={(event) => { setName(event.target.value) }} />
                 <FormHelperText mb={4}>Dein Name wird veröffentlicht.</FormHelperText>
               </FormControl>
               <FormControl isRequired>
                 <FormLabel>Nachricht</FormLabel>
-                <Textarea value={comment} onChange={(event) => { setComment(event.target.value) }} />
+                <Textarea value={comment} borderColor={"#525252"} onChange={(event) => { setComment(event.target.value) }} />
               </FormControl>
               <Button disabled={submitting} width={"full"} mt={4} colorScheme="teal" type="submit">Erstellen</Button>
             </form>
