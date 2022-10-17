@@ -100,6 +100,9 @@ const Navbar = (props) => {
                 <NextLink href="/projects" passHref>
                   <MenuItem as={Link}>Meine Projekte</MenuItem>
                 </NextLink>
+                <NextLink href="/comments" passHref>
+                  <MenuItem as={Link}>Kommentare</MenuItem>
+                </NextLink>
                 {/* <NextLink href="/posts" passHref>
                   <MenuItem as={Link}>Posts</MenuItem>
                 </NextLink> */}
