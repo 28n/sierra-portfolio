@@ -77,6 +77,10 @@ const Navbar = (props) => {
           <LinkItem href="/comments" path={path}>
             Kommentare
           </LinkItem>
+          <LinkItem target="_blank" href="https://github.com/28n/sierra-portfolio" path={path} display="inline-flex" alignItems="center" style={{ gap: 4 }} pl={2}>
+            <IoLogoGithub />
+            Quellcode
+          </LinkItem>
           {/* <LinkItem href="/posts" path={path}>
             Posts
           </LinkItem> */}
@@ -103,6 +107,9 @@ const Navbar = (props) => {
                 <NextLink href="/comments" passHref>
                   <MenuItem as={Link}>Kommentare</MenuItem>
                 </NextLink>
+                <MenuItem as={Link} href="https://github.com/28n/sierra-portfolio">
+                  Quellcode
+                </MenuItem>
                 {/* <NextLink href="/posts" passHref>
                   <MenuItem as={Link}>Posts</MenuItem>
                 </NextLink> */}
