@@ -63,6 +63,13 @@ const Comments = () => {
       return
     }
 
+    if (name.length <= 2 || comment.length <= 10) {
+      setName('')
+      setComment('')
+      setSubmitting(false)
+      return
+    }
+
     axios.post('/api/createComment', data).then((res) => {
       setName('')
       setComment('')
@@ -70,7 +77,9 @@ const Comments = () => {
         setComments(res.data)
       })
     }).finally(() => {
-      setSubmitting(false)
+      setTimeout(() => {
+        setSubmitting(false)
+      }, 5000)
     })
 
   }
