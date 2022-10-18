@@ -2,12 +2,13 @@ import Layout from '../components/layouts/main'
 import Fonts from '../components/fonts'
 import { AnimatePresence } from 'framer-motion'
 import Chakra from '../components/chakra'
+import { SessionProvider } from 'next-auth/react'
 
 if (typeof window !== 'undefined') {
   window.history.scrollRestoration = 'manual'
 }
 
-function MyApp({ Component, pageProps, router }) {
+function MyApp({ Component, pageProps, router, session }) {
   return (
     <Chakra cookies={pageProps.cookies}>
       <Fonts />
@@ -21,7 +22,9 @@ function MyApp({ Component, pageProps, router }) {
             }
           }}
         >
-          <Component {...pageProps} key={router.route} />
+          <SessionProvider session={session}>
+            <Component {...pageProps} key={router.route} />
+          </SessionProvider>
         </AnimatePresence>
       </Layout>
     </Chakra>
