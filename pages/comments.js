@@ -1,5 +1,5 @@
 import Layout from "../components/layouts/article";
-import { useDisclosure, useToast, Checkbox, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Container, Box, Heading, FormControl, Form, Textarea, Button, FormLabel, FormErrorMessage, FormHelperText, Input, Spacer, Tag } from '@chakra-ui/react'
+import { useDisclosure, useToast, Checkbox, HStack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Container, Box, Heading, FormControl, Form, Textarea, Button, FormLabel, FormErrorMessage, FormHelperText, Input, Spacer, Tag } from '@chakra-ui/react'
 import Section from "../components/section";
 import { useState, useEffect } from 'react'
 import axios from "axios"
@@ -171,8 +171,35 @@ const Comments = () => {
           </Box>
         </Section>
         <Section delay={0.6}>
+          <Box as="div" p={3} borderWidth={1} borderColor={"#525252"} borderRadius={"md"}>
+            <Heading as="h2" fontSize={16} mb={4}>
+              Rollen
+            </Heading>
+            <HStack>
+              <Tag colorScheme={"gray"}>
+                Besucher
+              </Tag>
+              <Tag colorScheme={"orange"}>
+                Premium
+                <Box ml={2}>
+                  <AiFillStar />
+                </Box>
+              </Tag>
+              <Tag colorScheme={"red"}>
+                Admin
+                <Box ml={2}>
+                  <MdAdminPanelSettings />
+                </Box>
+              </Tag>
+            </HStack>
+          </Box>
+        </Section>
+        <Section delay={0.9}>
           {loading ? <p>Lade...</p> : (
             <Box as="div" borderWidth={1} borderColor={"#525252"} borderRadius={"md"}>
+              <Heading as="h2" fontSize={16} p={3} borderBottomWidth={1}>
+                Kommentare
+              </Heading>
               {comments.length === 0 ? (
                 <Box m={4}>
                   <p>Keine Kommentare vorhanden.</p>
