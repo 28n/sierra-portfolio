@@ -1,5 +1,5 @@
 import Layout from "../components/layouts/article";
-import { useDisclosure, useToast, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Container, Box, Heading, FormControl, Form, Textarea, Button, FormLabel, FormErrorMessage, FormHelperText, Input, Spacer, Tag } from '@chakra-ui/react'
+import { useDisclosure, useToast, Checkbox, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Container, Box, Heading, FormControl, Form, Textarea, Button, FormLabel, FormErrorMessage, FormHelperText, Input, Spacer, Tag } from '@chakra-ui/react'
 import Section from "../components/section";
 import { useState, useEffect } from 'react'
 import axios from "axios"
@@ -28,6 +28,8 @@ const Comments = () => {
   const [name, setName] = useState('')
   const [comment, setComment] = useState('')
   const [submitting, setSubmitting] = useState(false)
+  const [sendAsPremium, setSendAsPremium] = useState(false)
+  const [sendAsAdmin, setSendAsAdmin] = useState(false)
   async function handleSubmit(e) {
     e.preventDefault()
     setSubmitting(true)
@@ -35,8 +37,8 @@ const Comments = () => {
     const data = {
       name,
       comment,
-      isPremium: session ? true : false,
-      isAdmin: session ? session.user?.email === 'sierra@samsierra.de' || session.user?.name === 'sierra' ? true : false : false,
+      isPremium: session ? sendAsPremium : false,
+      isAdmin: session ? session.user?.email === 'sierra@samsierra.de' || session.user?.name === 'sierra' ? sendAsAdmin : false : false,
     }
 
     if (flamulator_words.includes(name.toLowerCase()) || flamulator_words.includes(comment.toLowerCase())) {
@@ -143,6 +145,28 @@ const Comments = () => {
               </FormControl>
               <Button disabled={submitting} width={"full"} mt={4} colorScheme="teal" type="submit">Erstellen</Button>
             </form>
+            {session && (
+              <Box mt={4} display={"flex"} gap={2}>
+                <Checkbox onChange={(e) => { setSendAsPremium(e.target.checked) }} colorScheme={"teal"}>Send as
+                  <Tag ml={2} colorScheme={"orange"}>
+                    Premium
+                    <Box ml={2}>
+                      <FaSignInAlt />
+                    </Box>
+                  </Tag>
+                </Checkbox>
+                {session?.user?.email === 'sierra@samsierra.de' && session.user?.name === 'sierra' && (
+                  <Checkbox onChange={(e) => { setSendAsAdmin(e.target.checked) }} colorScheme={"teal"}>Send as
+                    <Tag ml={2} colorScheme={"red"}>
+                      Admin
+                      <Box ml={2}>
+                        <MdAdminPanelSettings />
+                      </Box>
+                    </Tag>
+                  </Checkbox>
+                )}
+              </Box>
+            )}
           </Box>
         </Section>
         <Section delay={0.6}>
