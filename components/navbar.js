@@ -12,6 +12,7 @@ import {
   MenuList,
   MenuButton,
   IconButton,
+  Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
@@ -75,7 +76,7 @@ const Navbar = (props) => {
             Meine Projekte
           </LinkItem>
           <LinkItem href="/comments" path={path}>
-            Kommentare
+            <Text as={"s"}>Kommentare</Text>
           </LinkItem>
           <LinkItem target="_blank" href="https://github.com/28n/sierra-portfolio" path={path} display="inline-flex" alignItems="center" style={{ gap: 4 }} pl={2}>
             <IoLogoGithub />
@@ -105,7 +106,9 @@ const Navbar = (props) => {
                   <MenuItem as={Link}>Meine Projekte</MenuItem>
                 </NextLink>
                 <NextLink href="/comments" passHref>
-                  <MenuItem as={Link}>Kommentare</MenuItem>
+                  <MenuItem as={Link}>
+                    <Text as={"s"}>Kommentare</Text>
+                  </MenuItem>
                 </NextLink>
                 <MenuItem as={Link} href="https://github.com/28n/sierra-portfolio">
                   Quellcode
