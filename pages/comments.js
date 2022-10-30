@@ -112,20 +112,6 @@ const Comments = () => {
   }
   return (
     <Layout title="Kommentare">
-      <Modal isOpen={true}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Deaktiviert</ModalHeader>
-          <ModalBody>
-            <Text>Die Kommentarfunktion ist im Moment auf Grund eines Bugs deaktivert.</Text>
-          </ModalBody>
-          <ModalFooter>
-            <Link href="/">
-              <Button colorScheme={"teal"}>Zurück</Button>
-            </Link>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
       <Container>
         <Heading as="h3" fontSize={20} mb={4}>
           Kommentare
