@@ -76,7 +76,7 @@ const Navbar = (props) => {
             Meine Projekte
           </LinkItem>
           <LinkItem href="/comments" path={path}>
-            <Text as={"s"}>Kommentare</Text>
+            Kommentare
           </LinkItem>
           <LinkItem target="_blank" href="https://github.com/28n/sierra-portfolio" path={path} display="inline-flex" alignItems="center" style={{ gap: 4 }} pl={2}>
             <IoLogoGithub />
@@ -107,7 +107,7 @@ const Navbar = (props) => {
                 </NextLink>
                 <NextLink href="/comments" passHref>
                   <MenuItem as={Link}>
-                    <Text as={"s"}>Kommentare</Text>
+                    Kommentare
                   </MenuItem>
                 </NextLink>
                 <MenuItem as={Link} href="https://github.com/28n/sierra-portfolio">
