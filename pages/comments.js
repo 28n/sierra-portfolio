@@ -21,10 +21,10 @@ const Comments = () => {
   const [comments, setComments] = useState([])
   const [loading, setLoading] = useState(true)
   useEffect(() => {
-    /* axios.get('/api/comments').then((res) => {
+    axios.get('/api/comments').then((res) => {
       setComments(res.data)
       setLoading(false)
-    }) */
+    })
   }, [])
 
   const [name, setName] = useState('')
