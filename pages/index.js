@@ -120,7 +120,7 @@ const Home = () => (
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoMailOpen />}
-              >sierra@samsierra.de</Button>
+              >28nh04@gmail.com</Button>
             </Link>
           </List>
           <ListItem>

@@ -12,11 +12,8 @@ const Mail = () => {
         <Box display={{ md: "flex" }}>
           <Box flexGrow={1}>
             <Heading>
-              Wenn du das hier siehst, ist etwas falschgelaufen...
+              Redirecting...
             </Heading>
-            <p>
-              Normalerweise solltest du weitergeleitet werden. Sorry, falls es nicht funktioniert hat. Bitte lade die Seite neu.
-            </p>
           </Box>
         </Box>
       </Container>
