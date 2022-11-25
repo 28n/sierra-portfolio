@@ -105,6 +105,12 @@ const Home = () => (
           borderWidth={1}
           rounded={"md"}
           my={6}
+          transition={"all .3s ease"}
+          _hover={{
+            shadow: "xl",
+            transition: "all .3s ease",
+            borderColor: "gray.700",
+          }}
         >
           <TechItem icon={<SiTypescript />} name="Typescript"></TechItem>
           <TechItem icon={<SiJavascript />} name="Javascript"></TechItem>
