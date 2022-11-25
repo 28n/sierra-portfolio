@@ -1,11 +1,12 @@
-import Layout from '../components/layouts/main'
-import Fonts from '../components/fonts'
-import { AnimatePresence } from 'framer-motion'
-import Chakra from '../components/chakra'
-import { SessionProvider } from 'next-auth/react'
+import Layout from "../components/layouts/main";
+import Fonts from "../components/fonts";
+import { AnimatePresence } from "framer-motion";
+import Chakra from "../components/chakra";
+import { SessionProvider } from "next-auth/react";
+import "react-tippy/dist/tippy.css";
 
-if (typeof window !== 'undefined') {
-  window.history.scrollRestoration = 'manual'
+if (typeof window !== "undefined") {
+  window.history.scrollRestoration = "manual";
 }
 
 function MyApp({ Component, pageProps, router, session }) {
@@ -17,8 +18,8 @@ function MyApp({ Component, pageProps, router, session }) {
           exitBeforeEnter
           initial={true}
           onExitComplete={() => {
-            if (typeof window !== 'undefined') {
-              window.scrollTo({ top: 0 })
+            if (typeof window !== "undefined") {
+              window.scrollTo({ top: 0 });
             }
           }}
         >
@@ -28,7 +29,7 @@ function MyApp({ Component, pageProps, router, session }) {
         </AnimatePresence>
       </Layout>
     </Chakra>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

@@ -21,7 +21,30 @@ import {
   IoLogoYoutube,
   IoMailOpen,
 } from "react-icons/io5";
+import {
+  SiTypescript,
+  SiJavascript,
+  SiNodedotjs,
+  SiNeovim,
+  SiReact,
+  SiNextdotjs,
+  SiYarn,
+  SiPnpm,
+  SiDocker,
+  SiLua,
+  SiTailwindcss,
+  SiPrisma,
+  SiPostgresql,
+  SiChakraui,
+  SiElixir,
+  SiRedwoodjs,
+  SiPowershell,
+  SiVisualstudiocode,
+  SiGit,
+  SiGithub,
+} from "react-icons/si";
 import email from "./redirects/mail";
+import { TechItem } from "../components/technologies";
 
 const Home = () => (
   <Layout>
@@ -72,6 +95,41 @@ const Home = () => (
           Javascript (Typescript) und PHP. Auch das Gestalten meiner Projekte
           mit CSS und Vorverarbeitern wie SCSS und SASS übernehme ich selber.
         </Paragraph>
+        <Container
+          width={"full"}
+          display="flex"
+          flexWrap={"wrap"}
+          flexDir="row"
+          justifyContent={"center"}
+          padding={1}
+          borderWidth={1}
+          rounded={"md"}
+          my={6}
+        >
+          <TechItem icon={<SiTypescript />} name="Typescript"></TechItem>
+          <TechItem icon={<SiJavascript />} name="Javascript"></TechItem>
+          <TechItem icon={<SiNodedotjs />} name="Node.js"></TechItem>
+          <TechItem icon={<SiNeovim />} name="Neovim"></TechItem>
+          <TechItem icon={<SiReact />} name="React"></TechItem>
+          <TechItem icon={<SiNextdotjs />} name="Next.js"></TechItem>
+          <TechItem icon={<SiYarn />} name="Yarn"></TechItem>
+          <TechItem icon={<SiPnpm />} name="Pnpm"></TechItem>
+          <TechItem icon={<SiDocker />} name="Docker"></TechItem>
+          <TechItem icon={<SiLua />} name="Lua"></TechItem>
+          <TechItem icon={<SiTailwindcss />} name="Tailwind CSS"></TechItem>
+          <TechItem icon={<SiPrisma />} name="Prisma"></TechItem>
+          <TechItem icon={<SiPostgresql />} name="PostgreSQL"></TechItem>
+          <TechItem icon={<SiChakraui />} name="Chakra UI"></TechItem>
+          <TechItem icon={<SiElixir />} name="Elixir"></TechItem>
+          <TechItem icon={<SiRedwoodjs />} name="Redwood.js"></TechItem>
+          <TechItem icon={<SiPowershell />} name="Powershell"></TechItem>
+          <TechItem
+            icon={<SiVisualstudiocode />}
+            name="Visual Studio Code"
+          ></TechItem>
+          <TechItem icon={<SiGit />} name="Git"></TechItem>
+          <TechItem icon={<SiGithub />} name="Github"></TechItem>
+        </Container>
         <Flex
           my={4}
           flexDir="row"
