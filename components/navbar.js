@@ -72,13 +72,24 @@ const Navbar = (props) => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
+          <LinkItem href="/repos" path={path}>
+            Meine Repos
+          </LinkItem>
           <LinkItem href="/projects" path={path}>
             Meine Projekte
           </LinkItem>
           <LinkItem href="/comments" path={path}>
             Kommentare
           </LinkItem>
-          <LinkItem target="_blank" href="https://github.com/28n/sierra-portfolio" path={path} display="inline-flex" alignItems="center" style={{ gap: 4 }} pl={2}>
+          <LinkItem
+            target="_blank"
+            href="https://github.com/28n/sierra-portfolio"
+            path={path}
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+            pl={2}
+          >
             <IoLogoGithub />
             Quellcode
           </LinkItem>
@@ -102,15 +113,19 @@ const Navbar = (props) => {
                 <NextLink href="/" passHref>
                   <MenuItem as={Link}>Home</MenuItem>
                 </NextLink>
+                <NextLink href="/repos" passHref>
+                  <MenuItem as={Link}>Meine Repos</MenuItem>
+                </NextLink>
                 <NextLink href="/projects" passHref>
                   <MenuItem as={Link}>Meine Projekte</MenuItem>
                 </NextLink>
                 <NextLink href="/comments" passHref>
-                  <MenuItem as={Link}>
-                    Kommentare
-                  </MenuItem>
+                  <MenuItem as={Link}>Kommentare</MenuItem>
                 </NextLink>
-                <MenuItem as={Link} href="https://github.com/28n/sierra-portfolio">
+                <MenuItem
+                  as={Link}
+                  href="https://github.com/28n/sierra-portfolio"
+                >
                   Quellcode
                 </MenuItem>
                 {/* <NextLink href="/posts" passHref>
