@@ -7,6 +7,7 @@ import {
   Button,
   List,
   ListItem,
+  Flex,
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import Paragraph from "../components/paragraph";
@@ -20,12 +21,11 @@ import {
   IoLogoYoutube,
   IoMailOpen,
 } from "react-icons/io5";
-import email from './redirects/mail'
+import email from "./redirects/mail";
 
 const Home = () => (
   <Layout>
     <Container>
-
       <Box display={{ md: "flex" }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
@@ -72,13 +72,24 @@ const Home = () => (
           Javascript (Typescript) und PHP. Auch das Gestalten meiner Projekte
           mit CSS und Vorverarbeitern wie SCSS und SASS übernehme ich selber.
         </Paragraph>
-        <Box align="center" my={4}>
+        <Flex
+          my={4}
+          flexDir="row"
+          gap={2}
+          alignItems="center"
+          justifyContent={"center"}
+        >
+          <NextLink href="/repos" passHref scroll={false}>
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+              Meine Repos
+            </Button>
+          </NextLink>
           <NextLink href="/projects" passHref scroll={false}>
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
               Meine Projekte
             </Button>
           </NextLink>
-        </Box>
+        </Flex>
       </Section>
 
       <Section delay={0.2}>
@@ -120,7 +131,9 @@ const Home = () => (
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoMailOpen />}
-              >28nh04@gmail.com</Button>
+              >
+                28nh04@gmail.com
+              </Button>
             </Link>
           </List>
           <ListItem>
@@ -135,10 +148,7 @@ const Home = () => (
             </Link>
           </ListItem>
           <ListItem>
-            <Link
-              href="/redirects/youtube"
-              target="_self"
-            >
+            <Link href="/redirects/youtube" target="_self">
               <Button
                 variant="ghost"
                 colorScheme="teal"
