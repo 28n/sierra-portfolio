@@ -37,16 +37,16 @@ const Works = () => (
           Windows 10
         </RepoGridItem>
       </Section>
-      <Section delay={0.3}>
-        <RepoGridItem
-          id="guesstheghost"
-          title="Guess the Ghost"
-          thumbnail={gtg}
-        >
-          Einfaches Spiel, in dem man den Typs eines Geistes anhand der Beweise
-          erraten muss. Programmiert für das Spiel Phasmophobia.
-        </RepoGridItem>
-      </Section>
+      {/* <Section delay={0.3}> */}
+      {/*   <RepoGridItem */}
+      {/*     id="guesstheghost" */}
+      {/*     title="Guess the Ghost" */}
+      {/*     thumbnail={gtg} */}
+      {/*   > */}
+      {/*     Einfaches Spiel, in dem man den Typs eines Geistes anhand der Beweise */}
+      {/*     erraten muss. Programmiert für das Spiel Phasmophobia. */}
+      {/*   </RepoGridItem> */}
+      {/* </Section> */}
       {/* <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
           <WorkGridItem id="inkdrop" title="Inkdrop" thumbnail={thumbInkdrop}>
